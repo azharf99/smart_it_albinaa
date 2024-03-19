@@ -1,0 +1,822 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-19 18:04+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\assessments\models.py:15
+msgid "Select one of assessment list"
+msgstr ""
+
+#: .\assessments\models.py:16
+msgid "Mid-semester assessment"
+msgstr ""
+
+#: .\assessments\models.py:17
+msgid "End of semester assessment"
+msgstr ""
+
+#: .\assessments\models.py:30 .\assessments\models.py:43
+#: .\assessments\models.py:103
+msgid "Assesment Type"
+msgstr ""
+
+#: .\assessments\models.py:31 .\assessments\models.py:98
+msgid "Assesment Name"
+msgstr ""
+
+#: .\assessments\models.py:44
+msgid "Assesment Types"
+msgstr ""
+
+#: .\assessments\models.py:55 .\assessments\models.py:68
+msgid "Assesment Answer Sheet"
+msgstr ""
+
+#: .\assessments\models.py:56
+msgid "Assesment Answer Sheet Name"
+msgstr ""
+
+#: .\assessments\models.py:69 .\assessments\models.py:104
+msgid "Assesment Answer Sheets"
+msgstr ""
+
+#: .\assessments\models.py:75
+msgid "Assesment Subject"
+msgstr ""
+
+#: .\assessments\models.py:76
+msgid "Assesment Date"
+msgstr ""
+
+#: .\assessments\models.py:77
+msgid "Assesment Start Time"
+msgstr ""
+
+#: .\assessments\models.py:78
+msgid "Assesment End Time"
+msgstr ""
+
+#: .\assessments\models.py:79
+msgid "Assesment Duration"
+msgstr ""
+
+#: .\assessments\models.py:91 .\assessments\models.py:99
+msgid "Assesment Schedule"
+msgstr ""
+
+#: .\assessments\models.py:92
+msgid "Assesment Schedules"
+msgstr ""
+
+#: .\assessments\models.py:100 .\subjects\models.py:17
+msgid "Subject Teacher"
+msgstr ""
+
+#: .\assessments\models.py:101 .\subjects\models.py:31
+msgid "Subject"
+msgstr ""
+
+#: .\assessments\models.py:102
+msgid "Assesment Class"
+msgstr ""
+
+#: .\assessments\models.py:105 .\inventories\models.py:15
+#: .\proposals\models.py:15 .\students_presence\models.py:30
+msgid "Notes"
+msgstr ""
+
+#: .\assessments\models.py:106 .\calendars\models.py:25 .\scores\models.py:50
+#: .\students_presence\models.py:31 .\subjects\models.py:19
+#: .\teachers_presence\models.py:27 .\teachers_presence\models.py:51
+msgid "Semester"
+msgstr ""
+
+#: .\assessments\models.py:107 .\proposals\models.py:16
+msgid "Created by"
+msgstr ""
+
+#: .\assessments\models.py:108 .\calendars\models.py:26 .\grades\models.py:12
+#: .\inventories\models.py:16 .\inventories\models.py:43
+#: .\proposals\models.py:17 .\schedules\models.py:37 .\schedules\models.py:62
+#: .\scores\models.py:51 .\students\models.py:27
+#: .\students_presence\models.py:32 .\subjects\models.py:20
+#: .\teachers_presence\models.py:28 .\teachers_presence\models.py:52
+msgid "Academic Year"
+msgstr ""
+
+#: .\assessments\models.py:109
+msgid "Question File Upload"
+msgstr ""
+
+#: .\assessments\models.py:109 .\assessments\models.py:110
+#: .\assessments\models.py:111 .\proposals\models.py:18
+msgid "File format must beetween .pdf or .docx"
+msgstr ""
+
+#: .\assessments\models.py:110
+msgid "Question Grid Upload"
+msgstr ""
+
+#: .\assessments\models.py:111
+msgid "Answer File Upload"
+msgstr ""
+
+#: .\assessments\models.py:123
+msgid "Assesment"
+msgstr ""
+
+#: .\assessments\models.py:124
+msgid "Assesments"
+msgstr "Penilaian"
+
+#: .\calendars\models.py:12
+msgid "Select calendar type"
+msgstr ""
+
+#: .\calendars\models.py:13
+msgid "For All Students"
+msgstr ""
+
+#: .\calendars\models.py:14
+msgid "For 10th Grade Students Only"
+msgstr ""
+
+#: .\calendars\models.py:15
+msgid "For 11th Grade Students Only"
+msgstr ""
+
+#: .\calendars\models.py:16
+msgid "For 12th Grade Students Only"
+msgstr ""
+
+#: .\calendars\models.py:21 .\calendars\models.py:27
+msgid "Event Name"
+msgstr ""
+
+#: .\calendars\models.py:22
+msgid "Event Start Date"
+msgstr ""
+
+#: .\calendars\models.py:23
+msgid "Event End Date"
+msgstr ""
+
+#: .\calendars\models.py:24
+msgid "calendar Duration"
+msgstr ""
+
+#: .\calendars\models.py:42
+msgid "calendar Schedule"
+msgstr ""
+
+#: .\calendars\models.py:43
+msgid "calendar Schedules"
+msgstr ""
+
+#: .\duties\models.py:7 .\permission\models.py:12 .\teachers\models.py:33
+msgid "Teacher"
+msgstr ""
+
+#: .\duties\models.py:8
+msgid "Duty Type"
+msgstr ""
+
+#: .\duties\models.py:9
+msgid "Duty Start Date"
+msgstr ""
+
+#: .\duties\models.py:10
+msgid "Duty End Date"
+msgstr ""
+
+#: .\duties\models.py:11
+msgid "Duty File"
+msgstr ""
+
+#: .\duties\models.py:12
+msgid "Duty Notes"
+msgstr ""
+
+#: .\duties\models.py:24
+msgid "Duty"
+msgstr ""
+
+#: .\duties\models.py:25
+msgid "Duties"
+msgstr ""
+
+#: .\grades\models.py:8
+msgid "Class Full Name"
+msgstr ""
+
+#: .\grades\models.py:9
+msgid "Class Short Name"
+msgstr ""
+
+#: .\grades\models.py:10
+msgid "Class Alias Name"
+msgstr ""
+
+#: .\grades\models.py:11
+msgid "Homeroom Teacher"
+msgstr ""
+
+#: .\grades\models.py:24
+msgid "Class"
+msgstr ""
+
+#: .\grades\models.py:25
+msgid "Classes"
+msgstr ""
+
+#: .\inventories\models.py:7
+msgid "Inventory Name"
+msgstr ""
+
+#: .\inventories\models.py:8
+msgid "Inventory Total Amount"
+msgstr ""
+
+#: .\inventories\models.py:9
+msgid "Inventory Available Amount"
+msgstr ""
+
+#: .\inventories\models.py:10
+msgid "Inventory Owner"
+msgstr ""
+
+#: .\inventories\models.py:11 .\inventories\models.py:54
+msgid "Inventory Status"
+msgstr ""
+
+#: .\inventories\models.py:12
+msgid "Inventory Price"
+msgstr ""
+
+#: .\inventories\models.py:13
+msgid "Inventory Buy Date"
+msgstr ""
+
+#: .\inventories\models.py:14
+msgid "Inventory Buy Place"
+msgstr ""
+
+#: .\inventories\models.py:27
+msgid "Inventory"
+msgstr ""
+
+#: .\inventories\models.py:28
+msgid "Inventories"
+msgstr ""
+
+#: .\inventories\models.py:55
+msgid "Inventory Statuses"
+msgstr ""
+
+#: .\permission\models.py:6 .\students_presence\models.py:12
+#: .\teachers_presence\models.py:10
+msgid "Izin"
+msgstr ""
+
+#: .\permission\models.py:7 .\students_presence\models.py:13
+#: .\teachers_presence\models.py:11
+msgid "Sakit"
+msgstr ""
+
+#: .\permission\models.py:8 .\students_presence\models.py:15
+#: .\teachers_presence\models.py:13
+msgid "Cuti"
+msgstr ""
+
+#: .\permission\models.py:13
+msgid "Permission Type"
+msgstr ""
+
+#: .\permission\models.py:14
+msgid "Permission Start Date"
+msgstr ""
+
+#: .\permission\models.py:15
+msgid "Permission End Date"
+msgstr ""
+
+#: .\permission\models.py:16
+msgid "Permission File"
+msgstr ""
+
+#: .\permission\models.py:17
+msgid "Permission Notes"
+msgstr ""
+
+#: .\permission\models.py:29
+msgid "Permission"
+msgstr ""
+
+#: .\permission\models.py:30
+msgid "Permissions"
+msgstr ""
+
+#: .\proposals\models.py:7
+msgid "Proposal Name"
+msgstr ""
+
+#: .\proposals\models.py:8
+msgid "Proposal Start Date Execution"
+msgstr ""
+
+#: .\proposals\models.py:9
+msgid "Proposal End Date Execution"
+msgstr ""
+
+#: .\proposals\models.py:10
+msgid "Proposal Purpose"
+msgstr ""
+
+#: .\proposals\models.py:11
+msgid "Proposal Person In Charge"
+msgstr ""
+
+#: .\proposals\models.py:12
+msgid "Proposal Person In Charge Bank Account"
+msgstr ""
+
+#: .\proposals\models.py:13
+msgid "Proposal Person In Charge Account Number"
+msgstr ""
+
+#: .\proposals\models.py:14
+msgid "Estimated Cost Budget"
+msgstr ""
+
+#: .\proposals\models.py:18
+msgid "Proposal File Upload"
+msgstr ""
+
+#: .\proposals\models.py:30
+msgid "Proposal"
+msgstr ""
+
+#: .\proposals\models.py:31
+msgid "Proposals"
+msgstr ""
+
+#: .\schedules\models.py:19
+msgid "Select schedule day"
+msgstr ""
+
+#: .\schedules\models.py:20
+msgid "Monday"
+msgstr ""
+
+#: .\schedules\models.py:21
+msgid "Tuesday"
+msgstr ""
+
+#: .\schedules\models.py:22
+msgid "Wednesday"
+msgstr ""
+
+#: .\schedules\models.py:23
+msgid "Thursday"
+msgstr ""
+
+#: .\schedules\models.py:24
+msgid "Friday"
+msgstr ""
+
+#: .\schedules\models.py:25
+msgid "Saturday"
+msgstr ""
+
+#: .\schedules\models.py:26
+msgid "Sunday"
+msgstr ""
+
+#: .\schedules\models.py:30 .\schedules\models.py:56
+msgid "Schedule Name"
+msgstr ""
+
+#: .\schedules\models.py:31
+msgid "Schedule Alias Name"
+msgstr ""
+
+#: .\schedules\models.py:32 .\schedules\models.py:57
+msgid "Schedule Day"
+msgstr ""
+
+#: .\schedules\models.py:33 .\schedules\models.py:58
+msgid "Schedule Duration"
+msgstr ""
+
+#: .\schedules\models.py:34 .\schedules\models.py:59
+msgid "Schedule Start Time"
+msgstr ""
+
+#: .\schedules\models.py:35 .\schedules\models.py:60
+msgid "Schedule End Time"
+msgstr ""
+
+#: .\schedules\models.py:36 .\schedules\models.py:61
+msgid "Schedule Type"
+msgstr ""
+
+#: .\schedules\models.py:49
+msgid "Schedule"
+msgstr ""
+
+#: .\schedules\models.py:50
+msgid "Schedules"
+msgstr ""
+
+#: .\schedules\models.py:74
+msgid "Teacher presence schedule"
+msgstr ""
+
+#: .\schedules\models.py:75
+msgid "Teacher presence schedules"
+msgstr ""
+
+#: .\schools\models.py:7
+msgid "National School Unique Number (NISN)"
+msgstr ""
+
+#: .\schools\models.py:8
+msgid "School Name"
+msgstr ""
+
+#: .\schools\models.py:9
+msgid "School Status"
+msgstr ""
+
+#: .\schools\models.py:10
+msgid "School Email"
+msgstr ""
+
+#: .\schools\models.py:11
+msgid "School Contact"
+msgstr ""
+
+#: .\schools\models.py:12
+msgid "School Address"
+msgstr ""
+
+#: .\schools\models.py:13
+msgid "School Website"
+msgstr ""
+
+#: .\schools\models.py:14
+msgid "School Instagram"
+msgstr ""
+
+#: .\schools\models.py:15
+msgid "School Facebook"
+msgstr ""
+
+#: .\schools\models.py:16
+msgid "School Youtube"
+msgstr ""
+
+#: .\schools\models.py:29
+msgid "School"
+msgstr ""
+
+#: .\schools\models.py:30
+msgid "Schools"
+msgstr ""
+
+#: .\scores\models.py:22 .\students\models.py:16
+#: .\students_presence\models.py:27
+msgid "Student Name"
+msgstr ""
+
+#: .\scores\models.py:23 .\students_presence\models.py:28
+msgid "Student Class"
+msgstr ""
+
+#: .\scores\models.py:24 .\students_presence\models.py:26
+#: .\subjects\models.py:15
+msgid "Subject Name"
+msgstr ""
+
+#: .\scores\models.py:25
+msgid "Daily Assessment 1"
+msgstr ""
+
+#: .\scores\models.py:26
+msgid "Daily Assessment 2"
+msgstr ""
+
+#: .\scores\models.py:27
+msgid "Daily Assessment 3"
+msgstr ""
+
+#: .\scores\models.py:28
+msgid "Daily Assessment 4"
+msgstr ""
+
+#: .\scores\models.py:29
+msgid "Daily Assessment 5"
+msgstr ""
+
+#: .\scores\models.py:30
+msgid "Daily Assessment 6"
+msgstr ""
+
+#: .\scores\models.py:31
+msgid "Daily Assessment 7"
+msgstr ""
+
+#: .\scores\models.py:32
+msgid "Daily Assessment 8"
+msgstr ""
+
+#: .\scores\models.py:33
+msgid "Daily Assessment 9"
+msgstr ""
+
+#: .\scores\models.py:34
+msgid "Daily Assessment 10"
+msgstr ""
+
+#: .\scores\models.py:35
+msgid "Midterm Assessment"
+msgstr ""
+
+#: .\scores\models.py:36
+msgid "End of Semester Assessment"
+msgstr ""
+
+#: .\scores\models.py:41
+msgid "Temporary Score"
+msgstr ""
+
+#: .\scores\models.py:47
+msgid "Final Score"
+msgstr ""
+
+#: .\scores\models.py:49
+msgid "Attitude Score"
+msgstr ""
+
+#: .\scores\models.py:63
+msgid "Score"
+msgstr ""
+
+#: .\scores\models.py:64
+msgid "Scores"
+msgstr ""
+
+#: .\students\models.py:14
+msgid "Student's Unique Number (NIS)"
+msgstr ""
+
+#: .\students\models.py:15
+msgid "National Student's Unique Number (NISN)"
+msgstr ""
+
+#: .\students\models.py:17
+msgid "Student's Class"
+msgstr ""
+
+#: .\students\models.py:18
+msgid "Student's Gender"
+msgstr ""
+
+#: .\students\models.py:19
+msgid "Student's Address"
+msgstr ""
+
+#: .\students\models.py:20
+msgid "Student's Birth Place"
+msgstr ""
+
+#: .\students\models.py:21
+msgid "Student's Birth Date"
+msgstr ""
+
+#: .\students\models.py:22
+msgid "Student's Email"
+msgstr ""
+
+#: .\students\models.py:23
+msgid "Student's Phone"
+msgstr ""
+
+#: .\students\models.py:24
+msgid "Student's Status"
+msgstr ""
+
+#: .\students\models.py:25
+msgid "Student's Photo"
+msgstr ""
+
+#: .\students\models.py:26
+msgid "Student's Batch"
+msgstr ""
+
+#: .\students\models.py:38
+msgid "Student"
+msgstr ""
+
+#: .\students\models.py:39
+msgid "Students"
+msgstr ""
+
+#: .\students\models.py:46
+msgid "Student's Name"
+msgstr ""
+
+#: .\students\models.py:47
+msgid "Student's Birth Order"
+msgstr ""
+
+#: .\students\models.py:48
+msgid "Student's Dad Name"
+msgstr ""
+
+#: .\students\models.py:49
+msgid "Student's Dad Job"
+msgstr ""
+
+#: .\students\models.py:50
+msgid "Student's Dad Phone"
+msgstr ""
+
+#: .\students\models.py:51
+msgid "Student's Dad Email"
+msgstr ""
+
+#: .\students\models.py:52
+msgid "Student's Dad Education"
+msgstr ""
+
+#: .\students\models.py:53
+msgid "Student's Mom Name"
+msgstr ""
+
+#: .\students\models.py:54
+msgid "Student's Mom Job"
+msgstr ""
+
+#: .\students\models.py:55
+msgid "Student's Mom Education"
+msgstr ""
+
+#: .\students\models.py:56
+msgid "Student's Mom Phone"
+msgstr ""
+
+#: .\students\models.py:57
+msgid "Student's Mom Email"
+msgstr ""
+
+#: .\students\models.py:58
+msgid "Student's Guardian Name"
+msgstr ""
+
+#: .\students\models.py:59
+msgid "Student's Guardian Address"
+msgstr ""
+
+#: .\students\models.py:60
+msgid "Student's Guardian Phone"
+msgstr ""
+
+#: .\students\models.py:61
+msgid "Student's Guardian Email"
+msgstr ""
+
+#: .\students\models.py:72
+msgid "Student's Parent"
+msgstr ""
+
+#: .\students\models.py:73
+msgid "Student's Parents"
+msgstr ""
+
+#: .\students_presence\models.py:11 .\teachers_presence\models.py:9
+msgid "Hadir"
+msgstr ""
+
+#: .\students_presence\models.py:14 .\teachers_presence\models.py:12
+msgid "Tanpa Keterangan"
+msgstr ""
+
+#: .\students_presence\models.py:24
+msgid "Lesson Date"
+msgstr ""
+
+#: .\students_presence\models.py:25 .\subjects\models.py:18
+msgid "Subject Schedule"
+msgstr ""
+
+#: .\students_presence\models.py:29
+msgid "Student Presence"
+msgstr ""
+
+#: .\students_presence\models.py:44
+msgid "Students Presence"
+msgstr ""
+
+#: .\students_presence\models.py:45
+msgid "Students Presences"
+msgstr ""
+
+#: .\subjects\models.py:14
+msgid "Subject Code"
+msgstr ""
+
+#: .\subjects\models.py:16
+msgid "Subject Class"
+msgstr ""
+
+#: .\subjects\models.py:32
+msgid "Subjects"
+msgstr ""
+
+#: .\teachers\models.py:13
+msgid "Username"
+msgstr ""
+
+#: .\teachers\models.py:14
+msgid "Teacher Unique Number (NIY)"
+msgstr ""
+
+#: .\teachers\models.py:15 .\teachers_presence\models.py:24
+#: .\teachers_presence\models.py:49
+msgid "Teacher Name"
+msgstr ""
+
+#: .\teachers\models.py:16
+msgid "Teacher Gender"
+msgstr ""
+
+#: .\teachers\models.py:17
+msgid "Teacher Address"
+msgstr ""
+
+#: .\teachers\models.py:18
+msgid "Teacher Job"
+msgstr ""
+
+#: .\teachers\models.py:19
+msgid "Teacher Email"
+msgstr ""
+
+#: .\teachers\models.py:20
+msgid "Teacher Phone"
+msgstr ""
+
+#: .\teachers\models.py:21 .\teachers_presence\models.py:26
+msgid "Teacher Photo"
+msgstr ""
+
+#: .\teachers\models.py:22
+msgid "Teacher Active Status"
+msgstr ""
+
+#: .\teachers\models.py:34
+msgid "Teachers"
+msgstr ""
+
+#: .\teachers_presence\models.py:22 .\teachers_presence\models.py:47
+msgid "Teaching Date"
+msgstr ""
+
+#: .\teachers_presence\models.py:23 .\teachers_presence\models.py:48
+msgid "Teaching Schedule"
+msgstr ""
+
+#: .\teachers_presence\models.py:25 .\teachers_presence\models.py:50
+msgid "Teacher Presence"
+msgstr ""
+
+#: .\teachers_presence\models.py:40
+msgid "Teachers Presence"
+msgstr ""
+
+#: .\teachers_presence\models.py:41
+msgid "Teachers Presences"
+msgstr ""
+
+#: .\teachers_presence\models.py:64
+msgid "Teachers Class Presence"
+msgstr ""
+
+#: .\teachers_presence\models.py:65
+msgid "Teachers Class Presences"
+msgstr ""
