@@ -8,7 +8,7 @@ class Inventories(models.Model):
     inventory_total_amount = models.PositiveIntegerField(default=1, verbose_name=_("Inventory Total Amount"))
     inventory_available_amount = models.PositiveIntegerField(default=1, verbose_name=_("Inventory Available Amount"))
     inventory_owner = models.CharField(max_length=100, default="SMAS IT AL BINAA", verbose_name=_("Inventory Owner"))
-    inventory_status = models.ForeignKey(max_length=100, default="Ready", verbose_name=_("Inventory Status"))
+    inventory_status = models.ForeignKey("InventoryStatus", on_delete=models.CASCADE, verbose_name=_("Inventory Status"))
     inventory_price = models.FloatField(blank=True, verbose_name=_("Inventory Price"))
     inventory_buy_date = models.DateTimeField(blank=True, null=True, verbose_name=_("Inventory Buy Date"))
     inventory_buy_place = models.CharField(max_length=100, blank=True, verbose_name=_("Inventory Buy Place"))
