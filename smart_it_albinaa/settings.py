@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'admins',
     'alquran',
     'articles',
@@ -69,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'smart_it_albinaa.urls'
@@ -187,3 +189,9 @@ REST_FRAMEWORK = {
 # EMAIL_USE_TLS = False
 # EMAIL_USE_SSL = False
 # EMAIL_TIMEOUT = 25
+
+
+# django debug toolbar
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

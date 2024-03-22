@@ -15,7 +15,7 @@ class Admins(models.Model):
     admin_address = models.CharField(max_length=100, blank=True, null=True)
     admin_job = models.CharField(max_length=100, blank=True)
     admin_email = models.EmailField(default='smaitalbinaa.ekskul@outlook.com', blank=True)
-    admin_phone = models.CharField(max_length=20, blank=True, default=0)
+    admin_phone = models.CharField(max_length=30, blank=True, default=0)
     admin_photo = models.ImageField(upload_to='admin', default='blank-profile.png', blank=True, null=True, help_text="format foto .jpg/.jpeg")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

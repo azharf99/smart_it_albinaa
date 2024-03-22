@@ -27,7 +27,7 @@ class StudentsPresences(models.Model):
     student_name = models.ForeignKey(Students, on_delete=models.CASCADE, verbose_name=_("Student Name"))
     student_class = models.ForeignKey(Classes, on_delete=models.CASCADE, verbose_name=_("Student Class"))
     student_presence = models.CharField(max_length=20, choices=presence_types, default=presence_types[0][0], verbose_name=_("Student Presence"))
-    notes = models.CharField(max_length=100, blank=True, verbose_name=_("Notes"))
+    notes = models.CharField(max_length=250, blank=True, verbose_name=_("Notes"))
     semester = models.CharField(max_length=30, choices=semester_choices, verbose_name=_("Semester"))
     academic_year = models.CharField(max_length=50, default=f"{timezone.now().year}/{timezone.now().year+1}", verbose_name=_("Academic Year"))
     created_at = models.DateTimeField(auto_now_add=True)

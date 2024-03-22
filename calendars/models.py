@@ -21,10 +21,10 @@ class Calendars(models.Model):
     event_name = models.CharField(max_length=100, verbose_name=_("Event Name"))
     event_start_date = models.DateField(verbose_name=_("Event Start Date"))
     event_end_date = models.DateField(blank=True, null=True, verbose_name=_("Event End Date"))
-    calendar_types = models.TimeField(blank=True, null=True, verbose_name=_("calendar Duration"))
+    calendar_types = models.CharField(max_length=30, choices=calendar_types, verbose_name=_("Calendar Types"))
     semester = models.CharField(max_length=30, choices=semester_choices, verbose_name=_("Semester"))
     academic_year = models.CharField(max_length=50, default=f"{timezone.now().year}/{timezone.now().year+1}", verbose_name=_("Academic Year"))
-    calendar_notes = models.CharField(max_length=100, verbose_name=_("Event Name"))
+    calendar_notes = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Event Name"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

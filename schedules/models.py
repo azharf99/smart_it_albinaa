@@ -27,13 +27,13 @@ day_choices=(
 )
 
 class Schedules(models.Model):
-    schedule_name = models.CharField(max_length=20, verbose_name=_("Schedule Name"))
-    schedule_name_alias = models.CharField(max_length=20, verbose_name=_("Schedule Alias Name"))
-    schedule_day = models.CharField(max_length=20, choices=day_choices, verbose_name=_("Schedule Day"))
+    schedule_name = models.CharField(max_length=50, verbose_name=_("Schedule Name"))
+    schedule_name_alias = models.CharField(max_length=50, verbose_name=_("Schedule Alias Name"))
+    schedule_day = models.CharField(max_length=50, choices=day_choices, verbose_name=_("Schedule Day"))
     schedule_duration = models.DurationField(max_length=20, verbose_name=_("Schedule Duration"))
     schedule_time_begin = models.TimeField(verbose_name=_("Schedule Start Time"))
     schedule_time_end = models.TimeField(verbose_name=_("Schedule End Time"))
-    schedule_type = models.CharField(max_length=20, verbose_name=_("Schedule Type"))
+    schedule_type = models.CharField(max_length=50, verbose_name=_("Schedule Type"))
     academic_year = models.CharField(max_length=50, default=f"{timezone.now().year}/{timezone.now().year+1}", verbose_name=_("Academic Year"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

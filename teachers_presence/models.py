@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from subjects.models import Subjects
+from teachers.models import Teachers
 from schedules.models import Schedules, TeacherPresenceSchedules
 
 # Create your models here.
@@ -21,12 +22,12 @@ semester_choices = (
 class TeachersPresences(models.Model):
     teaching_date = models.DateField(default=timezone.now, verbose_name=_("Teaching Date"))
     teaching_schedule = models.ForeignKey(TeacherPresenceSchedules, on_delete=models.SET_NULL, null=True, verbose_name=_("Teaching Schedule"))
-    teacher_name = models.ForeignKey(Subjects, on_delete=models.CASCADE, verbose_name=_("Teacher Name"))
+    teacher_name = models.ForeignKey(Teachers, on_delete=models.CASCADE, verbose_name=_("Teacher Name"))
     teacher_presence = models.CharField(max_length=30, choices=presence_types, verbose_name=_("Teacher Presence"), default=presence_types[0][0])
     teacher_photo = models.ImageField(upload_to='presences', help_text="Pastikan foto jelas/tidak blur", verbose_name=_("Teacher Photo"))
     semester = models.CharField(max_length=30, choices=semester_choices, verbose_name=_("Semester"))
     academic_year = models.CharField(max_length=50, default=f"{timezone.now().year}/{timezone.now().year+1}", verbose_name=_("Academic Year"))
-    notes = models.CharField(max_length=100, blank=True)
+    notes = models.CharField(max_length=250, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -46,7 +47,8 @@ class TeachersPresences(models.Model):
 class TeachersClassPresences(models.Model):
     teaching_date = models.DateField(default=timezone.now, verbose_name=_("Teaching Date"))
     teaching_schedule = models.ForeignKey(Schedules, on_delete=models.SET_NULL, null=True, verbose_name=_("Teaching Schedule"))
-    teacher_name = models.ForeignKey(Subjects, on_delete=models.CASCADE, verbose_name=_("Teacher Name"))    
+    subject_name = models.ForeignKey(Subjects, on_delete=models.CASCADE, verbose_name=_("Subject Name"))    
+    teacher_name = models.ForeignKey(Teachers, on_delete=models.CASCADE, verbose_name=_("Teacher Name"))    
     teacher_presence = models.CharField(max_length=30, choices=presence_types, verbose_name=_("Teacher Presence"), default=presence_types[0][0])
     semester = models.CharField(max_length=30, choices=semester_choices, verbose_name=_("Semester"))
     academic_year = models.CharField(max_length=50, default=f"{timezone.now().year}/{timezone.now().year+1}", verbose_name=_("Academic Year"))

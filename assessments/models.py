@@ -33,7 +33,7 @@ class AssessmentsTypes(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.assesment_other_name
+        return self.assesment_name
     
 
     class Meta:
@@ -52,7 +52,7 @@ class AssessmentsTypes(models.Model):
 # Yang lain:
 
 class AssessmentsAnswerSheets(models.Model):
-    assesment_answer_sheet = models.CharField(max_length=10, choices=assesment_list, verbose_name=_("Assesment Answer Sheet"))
+    assesment_answer_sheet = models.CharField(max_length=100, choices=assesment_list, verbose_name=_("Assesment Answer Sheet"))
     assesment_answer_sheet_name = models.CharField(max_length=100, verbose_name=_("Assesment Answer Sheet Name"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -72,11 +72,12 @@ class AssessmentsAnswerSheets(models.Model):
 
 
 class AssessmentSchedules(models.Model):
-    assesment_subject = models.CharField(max_length=10, choices=assesment_list, verbose_name=_("Assesment Subject"))
+    assesment_type = models.ForeignKey(AssessmentsTypes, on_delete=models.CASCADE, verbose_name=_("Assesment Type"))
+    assesment_subject = models.ForeignKey(Subjects, on_delete=models.CASCADE, verbose_name=_("Assesment Subject"))
     assesment_date = models.DateField(verbose_name=_("Assesment Date"))
     assesment_start_time = models.TimeField(blank=True, null=True, verbose_name=_("Assesment Start Time"))
     assesment_end_time = models.TimeField(blank=True, null=True, verbose_name=_("Assesment End Time"))
-    assesment_duration = models.TimeField(blank=True, null=True, verbose_name=_("Assesment Duration"))
+    assesment_duration = models.DurationField(blank=True, null=True, verbose_name=_("Assesment Duration"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

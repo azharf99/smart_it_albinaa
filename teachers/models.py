@@ -18,7 +18,7 @@ class Teachers(models.Model):
     teacher_address = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Teacher Address"))
     teacher_job = models.CharField(max_length=100, blank=True, verbose_name=_("Teacher Job"))
     teacher_email = models.EmailField(default='smaitalbinaa.ekskul@outlook.com', blank=True, verbose_name=_("Teacher Email"))
-    teacher_phone = models.CharField(max_length=20, blank=True, default=0, verbose_name=_("Teacher Phone"))
+    teacher_phone = models.CharField(max_length=50, blank=True, default=0, verbose_name=_("Teacher Phone"))
     teacher_photo = models.ImageField(upload_to='teacher', default='blank-profile.png', blank=True, null=True, help_text="format foto .jpg/.jpeg", verbose_name=_("Teacher Photo"))
     is_active = models.BooleanField(default=True, verbose_name=_("Teacher Active Status"))
     created_at = models.DateTimeField(auto_now_add=True)
