@@ -15,19 +15,22 @@ assesment_list = (
     (None, _("Select one of assessment list")),
     ("PTS", _("Mid-semester assessment")),
     ("PAS", _("End of semester assessment")),
+    ("US", _("School assessment (US)")),
+    ("UM", _("Boarding assessment (UM)")),
 )
 
-# assesment_types = (
-#     (None, _("Select one of assessment types")),
-#     ("PG", _("Multiple Choice")),
-#     ("Isian Singkat", _("Fill in the Blank")),
-#     ("Essay", _("Essay")),
-#     ("TTS", _("Crossword")),
-#     ("Menjodohkan", _("Word Match")),
-# )
+assesment_types = (
+    (None, _("Select one of assessment types")),
+    ("PG", _("Multiple Choice")),
+    ("Isian Singkat", _("Fill in the Blank")),
+    ("Essay", _("Essay")),
+    ("TTS", _("Crossword")),
+    ("Menjodohkan", _("Word Match")),
+    ("Benar-Salah", _("True False")),
+)
 
 class AssessmentsTypes(models.Model):
-    assesment_type = models.CharField(max_length=10, choices=assesment_list, verbose_name=_("Assesment Type"))
+    assesment_type = models.CharField(max_length=100, choices=assesment_types, verbose_name=_("Assesment Type"))
     assesment_name = models.CharField(max_length=100, verbose_name=_("Assesment Name"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

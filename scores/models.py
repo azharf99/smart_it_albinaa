@@ -8,15 +8,15 @@ from django.utils.translation import gettext as _
 
 # Create your models here.
 qualitative_scores = (
-    ("A", "Sangat Baik"),
-    ("B", "Baik"),
-    ("C", "Cukup"),
-    ("D", "Kurang"),
+    ("A", _("Sangat Baik")),
+    ("B", _("Baik")),
+    ("C", _("Cukup")),
+    ("D", _("Kurang")),
 )
 
 semester_choices = (
-    ("Ganjil", "Ganjil"),
-    ("Genap", "Genap"),
+    ("Ganjil", _("Ganjil")),
+    ("Genap", _("Genap")),
 )
 class Scores(models.Model):  
     student_name = models.ForeignKey(Students, on_delete=models.CASCADE, verbose_name=_("Student Name"))
@@ -34,14 +34,34 @@ class Scores(models.Model):
     score_10 = models.PositiveSmallIntegerField(default=0, verbose_name=_("Daily Assessment 10"))
     pts = models.PositiveSmallIntegerField(default=0, verbose_name=_("Midterm Assessment"))
     pas = models.PositiveSmallIntegerField(default=0, verbose_name=_("End of Semester Assessment"))
-    student_temporary_score = models.GeneratedField(
-        expression=F("score_1") + F("score_2") + F("score_3") + F("score_4") + F("score_5") + F("score_6") + F("score_7") + F("score_8") + F("score_9") + F("score_10") + (F("pts") * 0.4),
+    score_count = models.PositiveSmallIntegerField(default=1, verbose_name=_("Score Count"))
+    temp_score_count = models.PositiveSmallIntegerField(default=1, verbose_name=_("Temporary Score Count"))
+    sum_score = models.GeneratedField(
+        expression=F("score_1") + F("score_2") + F("score_3") + F("score_4") + F("score_5") + F("score_6") + F("score_7") + F("score_8") + F("score_9") + F("score_10"),
+        output_field=models.FloatField(),
+        db_persist=True,
+        verbose_name=_("Sum of Score")
+    )
+    average_score = models.GeneratedField(
+        expression=F("sum_score") / F("score_count"),
+        output_field=models.FloatField(),
+        db_persist=True,
+        verbose_name=_("Average of Score")
+    )
+    temp_average_score = models.GeneratedField(
+        expression=F("sum_score") / F("temp_score_count"),
+        output_field=models.FloatField(),
+        db_persist=True,
+        verbose_name=_("Average of Score")
+    )
+    temp_score = models.GeneratedField(
+        expression=F("temp_average_score") + (F("pts") * 0.4),
         output_field=models.FloatField(),
         db_persist=True,
         verbose_name=_("Temporary Score")
     )
-    student_final_score = models.GeneratedField(
-        expression=F("score_1") + F("score_2") + F("score_3") + F("score_4") + F("score_5") + F("score_6") + F("score_7") + F("score_8") + F("score_9") + F("score_10") + (F("pts") * 0.2) + (F("pas") * 0.2),
+    final_score = models.GeneratedField(
+        expression=F("average_score") + (F("pts") * 0.2) + (F("pas") * 0.2),
         output_field=models.FloatField(),
         db_persist=True,
         verbose_name=_("Final Score")
@@ -53,7 +73,7 @@ class Scores(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.student_name.student_name} {self.student_final_score} {self.semester} {self.academic_year}"
+        return f"{self.student_name.student_name} {self.final_score} {self.semester} {self.academic_year}"
 
 
     class Meta:

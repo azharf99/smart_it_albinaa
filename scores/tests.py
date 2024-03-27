@@ -15,9 +15,62 @@ gender=('L','P')
 semester=("Ganjil", "Genap")
 qualitative_scores = ("A", "B", "C", "D")
 
+class_full_list = (
+    "X-MIPA-A",
+    "X-MIPA-B",
+    "X-MIPA-C",
+    "X-MIPA-D",
+    "X-MIPA-E",
+    "X-MIPA-F",
+    "X-MIPA-G",
+    "X-MIPA-H",
+    "XI-MIPA-A",
+    "XI-MIPA-B",
+    "XI-MIPA-C",
+    "XI-MIPA-D",
+    "XI-MIPA-E",
+    "XI-MIPA-F",
+    "XI-MIPA-G",
+    "XI-MIPA-H",
+    "XII-MIPA-A",
+    "XII-MIPA-B",
+    "XII-MIPA-C",
+    "XII-MIPA-D",
+    "XII-MIPA-E",
+    "XII-MIPA-F",
+    "XII-MIPA-G",
+    "XII-MIPA-H",
+)
+class_short_list = {
+    "X-MIPA-A": "X-A",
+    "X-MIPA-B": "X-B",
+    "X-MIPA-C": "X-C",
+    "X-MIPA-D": "X-D",
+    "X-MIPA-E": "X-E",
+    "X-MIPA-F": "X-F",
+    "X-MIPA-G": "X-G",
+    "X-MIPA-H": "X-H",
+    "XI-MIPA-A": "XI-A",
+    "XI-MIPA-B": "XI-B",
+    "XI-MIPA-C": "XI-C",
+    "XI-MIPA-D": "XI-D",
+    "XI-MIPA-E": "XI-E",
+    "XI-MIPA-F": "XI-F",
+    "XI-MIPA-G": "XI-G",
+    "XI-MIPA-H": "XI-H",
+    "XII-MIPA-A": "XII-A",
+    "XII-MIPA-B": "XII-B",
+    "XII-MIPA-C": "XII-C",
+    "XII-MIPA-D": "XII-D",
+    "XII-MIPA-E": "XII-E",
+    "XII-MIPA-F": "XII-F",
+    "XII-MIPA-G": "XII-G",
+    "XII-MIPA-H": "XII-H",
+}
+
 class ScoresCreateTestCase(TestCase):
     def setUp(self):
-        for i in range(10):
+        for i in range(50):
 
             name = faker.unique.first_name()
             user = User.objects.create(
@@ -37,10 +90,11 @@ class ScoresCreateTestCase(TestCase):
                 teacher_email = faker.email(),
                 teacher_phone = '0',
             )
-
+            
+            class_name = random.choice(class_full_list)
             classes = Classes.objects.create(
-                full_name = faker.first_name(),
-                short_name = faker.first_name(),
+                full_name = class_name,
+                short_name = class_short_list.get(class_name),
                 alias_name = faker.first_name(),
                 homeroom_teacher = teacher
             )
@@ -77,7 +131,7 @@ class ScoresCreateTestCase(TestCase):
                 semester = random.choice(semester),
             )
 
-            Scores.objects.create(
+            score = Scores.objects.create(
                 student_name = student,
                 student_class = classes,
                 subject_name = subject,
@@ -100,4 +154,9 @@ class ScoresCreateTestCase(TestCase):
     def test_numbers_of_querysets(self):
         """Return total of querysets"""
         total_assessments = Scores.objects.count()
-        self.assertEqual(total_assessments, 10)
+        self.assertEqual(total_assessments, 50)
+    
+    def filter_scores_by_students_class_name(self):
+        """Return Scores querysets by students class name"""
+        data = Scores.objects.filter(student_class__full_name="X-MIPA-C")
+        self.assertIsNotNone(data)

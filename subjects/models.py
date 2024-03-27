@@ -7,12 +7,13 @@ from schedules.models import Schedules
 
 # Create your models here.
 semester_choices = (
-    ("Ganjil", "Ganjil"),
-    ("Genap", "Genap"),
+    ("Ganjil", _("Ganjil")),
+    ("Genap", _("Genap")),
 )
 class Subjects(models.Model):
-    subject_code = models.CharField(max_length=100, verbose_name=_("Subject Code"))
+    subject_code = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Subject Code"))
     subject_name = models.CharField(max_length=100, verbose_name=_("Subject Name"))
+    subject_short_name = models.CharField(max_length=100, verbose_name=_("Subject Short Name"))
     subject_class = models.ForeignKey(Classes, on_delete=models.SET_NULL, null=True, verbose_name=_("Subject Class"))
     subject_teacher = models.ForeignKey(Teachers, on_delete=models.SET_NULL, null=True, verbose_name=_("Subject Teacher"))
     subject_schedule = models.ForeignKey(Schedules, on_delete=models.SET_NULL, null=True, verbose_name=_("Subject Schedule"))

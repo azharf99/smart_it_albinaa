@@ -13,6 +13,7 @@ jenis_kelamin = (
 class Teachers(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name=_("Username"))
     teacher_id = models.IntegerField(default=0, verbose_name=_('Teacher Unique Number (NIY)'))
+    teacher_code = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Teacher Code"))
     teacher_name = models.CharField(max_length=100, verbose_name=_("Teacher Name"))
     teacher_gender = models.CharField(max_length=1, choices=jenis_kelamin, verbose_name=_("Teacher Gender"))
     teacher_address = models.CharField(max_length=100, blank=True, null=True, verbose_name=_("Teacher Address"))
@@ -21,6 +22,7 @@ class Teachers(models.Model):
     teacher_phone = models.CharField(max_length=50, blank=True, default=0, verbose_name=_("Teacher Phone"))
     teacher_photo = models.ImageField(upload_to='teacher', default='blank-profile.png', blank=True, null=True, help_text="format foto .jpg/.jpeg", verbose_name=_("Teacher Photo"))
     is_active = models.BooleanField(default=True, verbose_name=_("Teacher Active Status"))
+    is_online = models.BooleanField(default=False, verbose_name=_("Teacher Online Status"))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -33,5 +35,5 @@ class Teachers(models.Model):
         ]
         verbose_name = _("Teacher")
         verbose_name_plural = _("Teachers")
-        ordering = ["-updated_at"]
+        ordering = ["teacher_name"]
         db_table = "teachers"

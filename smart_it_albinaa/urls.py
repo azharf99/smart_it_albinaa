@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
 from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import render
@@ -25,9 +24,30 @@ def home(request):
     return render(request, 'index.html')
 
 urlpatterns = [
-    path('', home),
+    path('', home, name="Home"),
     path('scores/', include('scores.urls')),
     path('admin/', admin.site.urls),
+    path('administrator/', include('admins.urls')),
+    path('alquran/', include('alquran.urls')),
+    path('articles/', include('articles.urls')),
+    path('assessments/', include('assessments.urls')),
+    path('calendars/', include('calendars.urls')),
+    path('duties/', include('duties.urls')),
+    path('grades/', include('grades.urls')),
+    path('hadits/', include('hadits.urls')),
+    path('inventories/', include('inventories.urls')),
+    path('islamic_contents/', include('islamic_contents.urls')),
+    path('permits/', include('permits.urls')),
+    path('proposals/', include('proposals.urls')),
+    path('schedules/', include('schedules.urls')),
+    path('schools/', include('schools.urls')),
+    path('scores/', include('scores.urls')),
+    path('students/', include('students.urls')),
+    path('students_presence/', include('students_presence.urls')),
+    path('subjects/', include('subjects.urls')),
+    path('teachers/', include('teachers.urls')),
+    path('teachers_presence/', include('teachers_presence.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path("__debug__/", include("debug_toolbar.urls")),
 ]

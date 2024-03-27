@@ -119,7 +119,7 @@ class TeachersClassPresencesCreateTestCase(TestCase):
                 subject_name = subject,
                 teacher_name = teacher,
                 teacher_presence = random.choice(presence_type),
-                notes = faker.paragraph(nb_sentences=2),
+                notes = faker.paragraph(nb_sentences=1),
                 semester = random.choice(semester)
             )
 
